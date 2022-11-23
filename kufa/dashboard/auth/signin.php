@@ -35,7 +35,8 @@
             <div class="auth-credentials m-b-xxl">
            <form action="./signin_data.php" method="post">
            <label for="signInEmail" class="form-label">Email address</label>
-                <input type="email" class="form-control m-b-md" id="signInEmail" aria-describedby="signInEmail" placeholder="Enter email" name="email">
+                <input type="email" class="form-control m-b-md" id="signInEmail" aria-describedby="signInEmail" placeholder="Enter email" name="email"
+               value="<?=isset($_SESSION['old_email'])? $_SESSION['old_email']:''; unset($_SESSION['old_email'])?>">
                 <?php
                  
                  if (isset($_SESSION['email_error'])) {?>
